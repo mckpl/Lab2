@@ -1,0 +1,57 @@
+<h1>Add new product</h1>
+
+<form method="post" enctype="multipart/form-data">
+
+  <fieldset>
+    <legend>Personal info</legend>
+    <label>Full name: <input type="text" name="full_name" value="John"></label><br>
+    <label>Email address: <input type="email" name="email" placeholder="e.g. kowalski@example.com"></label><br>
+    <label>Phone number: <input type="tel" name="phone" placeholder="+48 123 456 789"></label><br>
+    <label><input type="checkbox" name="create_account"> Create an account</label><br>
+    <label>Password: <input type="password" name="password" placeholder="Min. 8 characters" minlength="8"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Product info</legend>
+    <label>Product type:
+      <select name="product_type">
+        <option value="">— choose —</option>
+      </select>
+    </label><br>
+    <label>Price: <input type="range" name="price" min="0" max="1000" value="500"></label><br>
+    <label>Description:<br>
+      <textarea name="description" placeholder="Short product description..."></textarea>
+    </label><br>
+    <label>Maker:
+      <input type="text" name="maker" list="makers" placeholder="e.g. Apple">
+      <datalist id="makers"></datalist>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Warranty period</legend>
+    <label><input type="radio" name="warranty" value="12"> 12 months</label>
+    <label><input type="radio" name="warranty" value="24"> 24 months</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Other</legend>
+    <label>Product photo: <input type="file" name="photo" accept="image/*"></label><br>
+    <label>Purchased date: <input type="date" name="purchased_date"></label><br>
+    <label>Tags:
+      <select name="tags" multiple>
+        <option value="new">New</option>
+        <option value="used">Used</option>
+        <option value="popular">Popular</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Action</legend>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+    <button type="submit" name="action" value="draft">Save draft</button>
+  </fieldset>
+
+</form>
